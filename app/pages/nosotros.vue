@@ -1,8 +1,8 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="about">
+  <div>
     <h1>About Us</h1>
-    <p>This is the about page content.</p>
+    <p>Esta es la pagina de informacion sobre nuestra aplicación</p>
   </div>
 </template>

@@ -1,7 +1,8 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="about">
+  <div>
     <h1>Home Page</h1>
+    <p>Bienvenido a la página principal de nuestra aplicación.</p>
   </div>
 </template>
