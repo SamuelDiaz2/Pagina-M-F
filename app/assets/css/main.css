@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  @apply bg-black text-white;
+}
+
+/* 1. Configuración de Base */
+@layer base {
+  html {
+    /* Evita el rebote de scroll y asegura fondo negro */
+    scroll-behavior: smooth;
+    background-color: #000000;
+  }
+
+  body {
+    @apply antialiased bg-black text-white overflow-x-hidden;
+    font-family: 'Inter', sans-serif; /* O la fuente que prefieras */
+  }
+
+  /* Estilo para los títulos globales */
+  h1, h2, h3, h4 {
+    @apply font-black uppercase tracking-tighter italic;
+    line-height: 0.9;
+  }
+}
+
+/* 2. Estilos Personalizados "Rock Style" */
+@layer components {
+  /* Efecto de ruido/textura de fondo para toda la web */
+  .bg-grunge {
+    position: relative;
+  }
+  
+  .bg-grunge::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.05;
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Botones estilo Metal */
+  .btn-rock {
+    @apply relative px-8 py-3 border-2 border-white font-bold uppercase 
+           transition-all duration-300 hover:bg-white hover:text-black 
+           active:scale-95;
+  }
+}
+
+/* 3. Personalización del Scrollbar (Estética oscura) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b91c1c; /* Rojo al pasar el mouse */
+}
